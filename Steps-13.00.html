@@ -1,0 +1,282 @@
+
+Creating Measures
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">Create a measures table and fill it with the following
+measures.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">1.&nbsp; Arrow
+ItemsSold MOM% = <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">SWITCH(<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; TRUE(),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+ISBLANK([Items Sold MoM%]) || [Items Sold MoM%] = 0, "",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; [Items Sold
+MoM%] &lt; 0, UNICHAR(9660),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+UNICHAR(9650))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">2. Arrow Profit Margin MOM% = <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">SWITCH(<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; TRUE(),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; ISBLANK([Profit
+Margin MOM%]) || [Profit Margin MOM%] = 0, "",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; [Profit
+Margin MOM%] &lt; 0, UNICHAR(9660),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+UNICHAR(9650))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">3.&nbsp; Arrow Profit
+Margin YoY% = <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">SWITCH(<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; TRUE(),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+ISBLANK([Profit Margin YoY%]) || [Profit Margin YoY%] = 0, "",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; [Profit
+Margin YoY%] &lt; 0, UNICHAR(9660),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+UNICHAR(9650))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">4. Arrow Sales MOM% = <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">SWITCH(<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; TRUE(),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+ISBLANK([Sales MoM%]) || [Sales MoM%] = 0, "",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; [Sales MoM%]
+&lt; 0, UNICHAR(9660),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+UNICHAR(9650))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">5.&nbsp; IBC
+ItemsSold MoM% = <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">IF(<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; ISBLANK([Items
+Sold MoM%]) || [Items Sold MoM%] = 0,<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; "
+",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+FORMAT([Items Sold MoM%], "0%"))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">6. IBC Profit Margin = <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">IF(<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+ISBLANK([Profit Margin]) || [Profit Margin] = 0,<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; "
+",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+FORMAT([Profit Margin], "0%"))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">7. IBC Profit Margin YoY% = <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">IF(<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+ISBLANK([Profit Margin YoY%]) || [Profit Margin YoY%] = 0,<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; "
+",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+FORMAT([Profit Margin YoY%], "0%"))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">8. IBC Sales MoM% = <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">IF(<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+ISBLANK([Sales MoM%]) || [Sales MoM%] = 0,<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; "
+",<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+FORMAT([Sales MoM%], "0%"))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">9. Items Sold MoM% = DIVIDE(([Total Items Sold]
+-[TotalItemsSold LM]),[TotalItemsSold LM])<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">10. Profit = SUM(SuperStore_Sales_Dataset[Profit])<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">11. Profit LY =
+CALCULATE(SUM(SuperStore_Sales_Dataset[Profit]),
+DATEADD('Calendar'[Date],-1,YEAR))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">12. Profit Margin = DIVIDE([Profit],[Total Sales],0)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">13. Profit Margin LM = CALCULATE([Profit
+Margin],DATEADD('Calendar'[Date],-1,MONTH))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">14. Profit Margin LY = CALCULATE([Profit
+Margin],DATEADD('Calendar'[Date],-1,YEAR))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">15. Profit Margin MOM% = DIVIDE(([Profit Margin]-
+[Profit Margin LM]),[Profit Margin LM])<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">16. Profit Margin YoY% = DIVIDE(([Profit Margin]-
+[Profit Margin LY]),[Profit Margin LY])<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">17.&nbsp; Sales MoM%
+= DIVIDE(([Total Sales]-[TotalSales LM]),[TotalSales LM])<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">18. Total Items Sold =
+SUM(SuperStore_Sales_Dataset[Quantity])<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">19. Total Sales = SUM(SuperStore_Sales_Dataset[Sales])<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">20. TotalItemsSold LM =
+CALCULATE(SUM(SuperStore_Sales_Dataset[Quantity]),&nbsp; DATEADD('Calendar'[Date],-1,MONTH))<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">21. TotalSales LM =
+CALCULATE(SUM(SuperStore_Sales_Dataset[Sales]),&nbsp;
+DATEADD('Calendar'[Date],-1,MONTH))<o:p></o:p></span></p>
+
+<p><a href="https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-measures" target="_blank">Creating Measures</a><br></p>
+
