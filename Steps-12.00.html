@@ -1,0 +1,78 @@
+
+Creating Calendar and Refresh Table
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">Create the Calendar table by selecting “New Table” and
+using the following DAX code. <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">Calendar = <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">ADDCOLUMNS (<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; CALENDAR (
+DATE (2019, 1, 1), DATE (2020, 12, 31) ),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+"Year", YEAR ( [Date] ),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+"MonthNumber", FORMAT ( MONTH ( [Date] ), "00" ),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; "Month
+Year", FORMAT ( [Date], "MMM YYYY" ),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; "Week
+Number", "Week-" &amp; FORMAT ( WEEKNUM ( [Date] ),
+"00" ),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; "Month
+- Day", MONTH ( [Date] ) &amp; "-" &amp; FORMAT ( [Date],
+"dd" ),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp; "Year
+Quarter", FORMAT ( [Date], "YYYY" ) &amp; "/Q" &amp;
+FORMAT ( [Date], "Q" ),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+"MonthYearSort", YEAR ( [Date] ) &amp; FORMAT ( MONTH ( [Date]
+), "00" ),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+"WeekDay", FORMAT ( [Date], "dddd" ),<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;&nbsp;&nbsp;
+"WeekDaySort", WEEKDAY([Date])<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">For the refresh table create a blank query. Use the
+following DAX code to pull the current date and time. <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">= DateTime.LocalNow()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif">Make sure to change the table and column name to
+something more appropriate, such as “Refresh Date.”</span></p><p class="MsoNormal"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif"><o:p><br></o:p></span></p><p class="MsoNormal"><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1538/12/1.gif" style="width: 50%;"><span style="font-size:12.0pt;line-height:107%;font-family:
+&quot;Times New Roman&quot;,serif"><o:p><br></o:p></span></p>
+
+<p><a href="https://learn.microsoft.com/en-us/power-bi/guidance/model-date-tables" target="_blank">Creating Date Table</a><br></p>
+
